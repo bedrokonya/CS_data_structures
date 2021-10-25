@@ -1,0 +1,5 @@
+*.out
+*.pyc
+bin/*
+lib/python3.7/*
+.idea/*
