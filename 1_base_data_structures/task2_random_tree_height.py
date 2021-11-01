@@ -34,7 +34,6 @@ class RandomTree:
                 node_count -= 1
 
 
-
 def main():
     n = int(input())
     if n == 0:
@@ -42,7 +41,7 @@ def main():
         return
     tree = RandomTree(n)
     tree_descr_str = input().strip()
-    tree_descr_list = list(map(int, tree_descr_str.split(" ")))
+    tree_descr_list  = list(map(int, tree_descr_str.split(" ")))
     for child_idx, parent_idx in enumerate(tree_descr_list):
         tree.add_child(child_idx, parent_idx)
 

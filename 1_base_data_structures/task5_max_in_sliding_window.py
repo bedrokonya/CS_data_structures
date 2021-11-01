@@ -61,9 +61,5 @@ def main():
         q.put(A[i])
         print(q.max())
 
-
-
-
-
 if __name__ == "__main__":
     main()

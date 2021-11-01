@@ -25,10 +25,3 @@ class Stack(tp.Generic[T]):
     def push(self, value: T):
         self.values.append(value)
         self.length += 1
-
-    # def _get_copied_value(self, value: T) -> T:
-    #     copy_op = getattr(value, "copy", None)
-    #     return copy_op(value) if callable(copy_op) else value
-
-
-

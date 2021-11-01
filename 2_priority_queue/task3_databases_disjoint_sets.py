@@ -20,11 +20,6 @@ class DisjointSet:
         j_id = self.find(j)
         if i_id == j_id:
             return
-        # self.parent[j_id] = i_id
-        # self.records_num[i_id] += self.records_num[j_id]
-        # self.records_num[j_id] = self.records_num[i_id]
-        # if self.current_max < self.records_num[i_id]:
-        #     self.current_max = self.records_num[i_id]
         if self.rank[i_id] > self.rank[j_id]:
             self.parent[j_id] = i_id
             self.records_num[i_id] += self.records_num[j_id]
@@ -46,7 +41,6 @@ def main():
     n, m = map(int, input().strip().split(" "))
     if n == 0 or m == 0:
         return
-
 
     table_sizes: tp.List[int] = list(map(int, input().strip().split(" ")))
 

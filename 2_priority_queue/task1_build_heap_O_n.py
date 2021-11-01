@@ -18,27 +18,6 @@ def sift_down(A: tp.List[int], idx: int, result: tp.List[str]) -> int:
         else:
             break
 
-# def sift_down(A: tp.List[int], idx: int) -> int:
-#
-#     max_index: int = idx
-#     heap_size: int = len(A)
-#
-#     l = get_left_child_idx(idx)
-#     if l < heap_size and A[l] < A[max_index]:
-#         max_index = l
-#     r = get_right_child_idx(idx)
-#     if r < heap_size and A[r] < A[max_index]:
-#         max_index = r
-#     if idx != max_index:
-#         A[idx], A[max_index] = A[max_index], A[idx]
-#         sift_down(A, max_index)
-#
-#     return max_index
-# 0 1 2 3 4 5
-# 7 6 5 4 3 2
-# 7 6 2 4 3 5
-# 7 3 2 4 6 5
-# 2 3 7 4 6 5
 
 def get_parent_idx(i: int) -> int:
     return math.floor(i - 1 / 2)

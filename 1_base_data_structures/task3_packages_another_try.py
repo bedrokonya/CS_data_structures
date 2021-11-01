@@ -16,7 +16,6 @@ def main():
             current_element_end_time = max(last_element_end_time, arrival_time) + duration_time
             deq.popleft()
             deq.append(current_element_end_time)
-            # print(deq)
 
 if __name__ == "__main__":
     main()

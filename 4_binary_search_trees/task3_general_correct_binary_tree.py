@@ -1,8 +1,6 @@
 import typing as tp
 import sys
 
-sys.setrecursionlimit(2 * 10**5)
-
 class BinaryTree:
     def __init__(self, vertices_by_index: tp.List[tp.Tuple[int, int, int]], root_idx: int):
         self.root_idx = root_idx
@@ -30,8 +28,9 @@ class BinaryTree:
 
 
 def main():
-    n = int(input())
+    sys.setrecursionlimit(2 * 10 ** 5)
 
+    n = int(input())
     tree_descr: tp.List[tp.Tuple[int, int, int]] = []
     for i in range(n):
         tree_descr.append(tuple(map(int, input().strip().split(" "))))

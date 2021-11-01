@@ -36,23 +36,3 @@ class QueueSizeFixed(tp.Generic[T]):
             if self.values[i]:
                 string += f" | value {self.values[i]}, index={i} | "
         return string
-
-
-def main():
-    q = QueueSizeFixed(10)
-    q.enqueue(10)
-    print(q)
-    q.enqueue(20)
-    print(q)
-    q.enqueue(30)
-    print(q)
-    q.dequeue()
-    print(q)
-    q.dequeue()
-    print(q)
-    q.dequeue()
-    print(q)
-    q.dequeue()
-
-if __name__ == "__main__":
-    main()
